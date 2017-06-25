@@ -20,7 +20,9 @@ from learn import views as learn_views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', learn_views.index),
-    url(r'^add_page$', learn_views.add_get_show),
+    url(r'^add_page$', learn_views.add_get_show, name='AddGetShow'),
     url(r'^add$', learn_views.add_get),
-    url(r'^add_form$', learn_views.add_form),
+    url(r'^add_form$', learn_views.add_form, name='AddForm'),
+    url(r'^send_email_page$', learn_views.send_email_show, name='SendEmailShow'),
+    url(r'^send_email$', learn_views.send_email),
 ]

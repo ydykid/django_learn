@@ -101,3 +101,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# email settings
+
+EMAIL_BACKEND = 'django.core.madil.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'ydy201@qq.com'
+EMAIL_HOST_POSSWORD = 'crdyyuilyrsubjbg'
+DEFAULT_FROM_EMAIL = 'ydy <ydy201@qq.com>'

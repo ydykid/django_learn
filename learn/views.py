@@ -29,3 +29,14 @@ def add_form(request):
     else :
         form = AddForm()
     return render(request, "learn/form.html", {'title':'add','form':form})
+
+# send Email
+def send_email_show(request):
+    return render(request, 'learn/send_email.html')
+
+def send_email(request):
+    to_email = request.GET.get('email')
+    subject = request.GET.get('subject')
+    context = request.GET.get('context')
+    send_email(subject,context,'ydy201@qq.com',[to_email],fail_silently=False)
+    return render(request, 'learn/send_email.html',{'info':'ok'})
