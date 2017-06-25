@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 from django.http import HttpResponse
+from django.core.mail import send_mail
 
 from .forms import AddForm
 
@@ -38,5 +39,5 @@ def send_email(request):
     to_email = request.GET.get('email')
     subject = request.GET.get('subject')
     context = request.GET.get('context')
-    send_email(subject,context,'ydy201@qq.com',[to_email],fail_silently=False)
+    send_mail(subject,context,'ydy201@qq.com',[to_email],fail_silently=False)
     return render(request, 'learn/send_email.html',{'info':'ok'})
