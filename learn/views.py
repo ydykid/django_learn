@@ -5,7 +5,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
+from django.conf import settings
+
 from .forms import AddForm
+from .myemail import MyEmail
 
 def index(request):
     return render(request, 'learn/index.html')
@@ -41,5 +44,7 @@ def send_email(request):
     context = request.GET.get('context')
     print("%s|%s|%s"%\
     (str(to_email),str(subject),str(context)))
-    send_mail(subject,context,'ydy201@qq.com',[to_email],fail_silently=False)
+    print(settings.EMAIL_BACKEND)
+    # send_mail(subject,context,'ydy201@qq.com',[to_email],fail_silently=False)
+    MyEmail.send(subject,context,[to_email])
     return render(request, 'learn/send_email.html',{'info':'ok'})
