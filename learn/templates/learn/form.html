@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}{% if title %} {% endif %}Form</title>
+  </head>
+  <body>
+    <p>Please Input 2 Integers:</p>
+    <form  method="post">
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" name="submit" value="submit">
+    </form>
+
+  </body>
+</html>

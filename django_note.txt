@@ -1,0 +1,17 @@
+# mac python3 下 pip3 安装django
+sudo pip3 install django=1.8.13
+# 创建project
+django-admin(.py) startproject project-name
+# 创建app
+python3 startapp app-name
+# 运行开发服务器
+python3 manage.py runserver localhost:1103
+# 数据库
+# 提交修改 根据models更新数据库
+python3 manage.py makemigrations
+# init 创建系统表
+python3 manage.py migrate
+# 创建超级用户
+python3 manage.py createsuperuser
+# 修改用户密码
+python3 manage.py changepassword username
