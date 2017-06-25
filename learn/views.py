@@ -39,5 +39,7 @@ def send_email(request):
     to_email = request.GET.get('email')
     subject = request.GET.get('subject')
     context = request.GET.get('context')
+    print("%s|%s|%s"%\
+    (str(to_email),str(subject),str(context)))
     send_mail(subject,context,'ydy201@qq.com',[to_email],fail_silently=False)
     return render(request, 'learn/send_email.html',{'info':'ok'})

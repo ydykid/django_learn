@@ -104,7 +104,7 @@ STATIC_URL = '/static/'
 
 # email settings
 
-EMAIL_BACKEND = 'django.core.madil.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 465
