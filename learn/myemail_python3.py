@@ -8,7 +8,7 @@ mail_host = 'smtp.qq.com'
 mail_user = 'ydy201@qq.com'
 mail_pass = 'crdyyuilyrsubjbg'
 sender = mail_user
-receivers = [receiver]
+receivers = [receiver,'2567123574@qq.com']
 
 # message = MIMEText(log)
 message = MIMEText('hello')
