@@ -15,3 +15,9 @@ python3 manage.py migrate
 python3 manage.py createsuperuser
 # 修改用户密码
 python3 manage.py changepassword username
+
+#  git
+# git 查看所有远程分支
+git branch -r
+# git 获取远程分支
+git checkout -b <local-branch-name> origin/<branch-name> 
